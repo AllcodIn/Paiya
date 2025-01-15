@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Page de Bienvenue.css">
+    <title>Page de Bienvenue</title>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="../static/images/I don’t know.jpeg" alt=""> -->
+        <div class="nav">
+            <button class="btn1">Se connecter</button>
+        </div>
+
+            <div class="d1">
+                <h1>🚀Créez votre évènement</h1>
+                <p>Créez des moments inoubliables en partageant votre passion! Publiez votre évènement dès maintenant sur Paiya et connectez-vous avec une communauté enthousiaste</p>
+            </div>
+
+            <div class="d2">
+                <h1>🌟 Découvrez nos fonctionnalités</h1>
+                <p>Créez des évènements sur mesure</p>
+                <p>Créez les participants avec facilité</p>
+                <p>Recevez des rappels et notifications personalisées</p>
+            </div>
+
+            <div class="d3">
+                <h1>🎯Pret à commencer</h1>
+                <p>Créez votre premier évènement maintenant et faites-en un moment inoubliables</p>
+            </div>
+
+            <a href="{{ url_for('login') }}"><button class="btn2">Commencer dès maintenant</button></a>
+    </div>
+    <footer></footer>
+
+    <script src="{{url_for('static', filename = 'js/Page de Bienvenue.js')}}">
+        function revealOnload(){
+    const revealElements = document.querySelectorAll('.d1');
+    revealElements.forEach((element, index)=> {
+        setTimeout(() => {
+            element.classList.add('visible');
+        },index * 300);
+    });
+}
+
+window.addEventListener('load', revealOnScroll);
+
+revealOnScroll();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="lgPage">
+        <div class="text">
+        <h1>Authentification par adresse e-mail</h1>
+        <br>
+        <p>Connectez-vous avec votre et votre mot de passe</p>
+    </div>
+        
+        <form action="{{ url_for('CreateAccount') }}">
+            <label for="">Adresse e-mail</label>
+            <input type="email" placeholder="Veuillez entrer votre e-mail" required>
+            <label for="">Mot de Passe</label>
+            <input type="password" placeholder="Veuillez entrer votre mot de passe" required>
+            <a href="#"><p class="forget">Mot de Passe oublie?</p></a>
+            <div class="btns">
+                <a href="{{ url_for('index') }}"><button class="btn1" type="submit">Se Connecter</button></a>
+            
+            <a href="{{ url_for('CreateAccount') }}"><button class="btn2" type="submit">S'inscrire</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

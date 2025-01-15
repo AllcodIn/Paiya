@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+
+    width: 100%;
+    height: 100vh;
+    background: url(../images/I-dont-know.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative
+
+}
+/* .container img{
+    object-fit: cover;
+} */
+.nav{
+    display: flex;
+    justify-content: end;
+    /* border: 1px solid #000; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.d1{
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: #fff;
+    width: 30%;
+    height: 15vh;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transform: translateY(-100px);
+    transition: opacity 0.6s ease, transform 2s ease;
+}
+
+.d1:hover{
+    transform: scale(1.1);
+}
+
+.d1.visible{
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.d2{
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: #fff;
+    width: 30%;
+    height: 15vh;
+    opacity: 1;
+    transform: translateY(100px);
+    transition: opacity 5s ease, transform 2s ease;
+}
+
+.d2:hover{
+    transform: scale(1.1);
+}
+
+.d2.visible{
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.d3{
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: #fff;
+    width: 30%;
+    height: 15vh;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    transform: translatey(-100px);
+    transition: opacity 5s ease, transform 2s ease;
+    /* transition: transform 3s ease; */
+}
+
+.d3:hover{
+    transform: scale(1.1);
+}
+
+.d3.visible{
+    opacity: 0;
+    transform: translateY(100px);
+}
+button{
+    background: #DB7093;
+    cursor: pointer;
+    color: #fff;
+    font-size: x-large;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 15%;
+    height: 5vh;
+    
+}
+.btn2{
+    background: #fff;
+    color: #DB7093;
+    width: 20%;
+    border: 1px solid #DB7093;
+    position: absolute;
+    top: 90%;
+}
+.btn2:hover{
+    background: #DB7093;
+    color: #fff;
+}
+footer{
+    /* background: #2C2C2C;
+    background: #800040;
+    background: #808080; */
+    background: #FFE4E9;
+    background: #F8D7DA;
+    /* background: #4B2C2C;  */
+    width: 100%;
+    height: 25vh; 
+}

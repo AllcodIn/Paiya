@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lgPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    /* border: 0.01px solid #333; */
+    width: 50%;
+    height: 90vh;
+}
+form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 10%;
+    flex-wrap: wrap;
+    /* border: 1px solid #000; */
+    width: 80%;
+    height: 65vh;
+}
+label{
+    font-size: x-large;
+    font-weight: bold;
+    /* margin-left: 5%; */
+    
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    /* border: 1px solid #000; */
+    margin-left: 10%;
+    border-radius: 15px;
+    width: 80%;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+    
+}
+.forget{
+    margin-left: 70%;
+    margin-top: 0%;
+    font-size: small;
+    font-weight: bold;
+    color: palevioletred;
+    cursor: pointer;
+
+}
+.text{
+    /* border: 1px solid #000; */
+    width: 40%;
+    height: 10vh;
+    margin-top: 60px;
+    position: absolute;
+    top: 30px;
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: -40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 20vh;
+    /* border: 1px solid #000; */
+}
+.btn1,.btn2{
+    background:palevioletred;
+    color: #fff;
+    font-size: x-large;
+    border: transparent;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+@media screen and (min-width:320px) and (max-width:1440px){
+    body{
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        /* background: wheat; */
+    }
+    .lgPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        /* border: 0.01px solid #333; */
+        width: 80%;
+        height: 90vh;
+        /* background: pink; */
+    }
+    form{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 40%;
+        flex-wrap: wrap;
+        /* border: 1px solid #000; */
+        width: 80%;
+        height: 65vh;
+        /* background: yellow; */
+    }
+    label{
+        font-size: x-large;
+        font-weight: bold;
+        /* margin-left: 5%; */
+        
+    }
+    input{
+        padding: 10px;
+        margin: 10px;
+        /* border: 1px solid #000; */
+        margin-left: 10%;
+        border-radius: 15px;
+        width: 80%;
+        height: 50px;
+        /* background: red; */
+    }
+    a{
+        text-decoration: none;
+        
+    }
+    .forget{
+        margin-left: 70%;
+        margin-top: 0%;
+        font-size: small;
+        font-weight: bold;
+        color: palevioletred;
+        cursor: pointer;
+    
+    }
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: stretch;
+        /* border: 1px solid #000; */
+        width: 60%;
+        height: 15vh;
+        font-size: small;
+        margin-left: -20px;
+        margin-top: 0px;
+        position: absolute;
+        top: 30px;
+        /* background: salmon; */
+    }
+    .btns{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 10%;
+        margin-top: 0px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 20vh;
+        /* border: 1px solid #000; */
+        /* background: violet; */
+    }
+    .btn1,.btn2{
+        /* background:palevioletred; */
+        color: #fff;
+        font-size: x-large;
+        border: transparent;
+        border-radius: 20px;
+        padding: 15px;
+        width: 100%;
+        cursor: pointer;
+    }
+}

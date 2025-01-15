@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .calendar {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      width: 300px;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .calendar-header button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .calendar-header button:hover {
+      background-color: #0056b3;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+    .day {
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .day-header {
+      font-weight: bold;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+    }
+
+    .current-day {
+      background-color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button id="prevMonth">Précédent</button>
+      <h3 id="monthYear"></h3>
+      <button id="nextMonth">Suivant</button>
+    </div>
+    <div class="days">
+      <!-- Les jours de la semaine -->
+      <div class="day day-header">Lun</div>
+      <div class="day day-header">Mar</div>
+      <div class="day day-header">Mer</div>
+      <div class="day day-header">Jeu</div>
+      <div class="day day-header">Ven</div>
+      <div class="day day-header">Sam</div>
+      <div class="day day-header">Dim</div>
+    </div>
+  </div>
+
+  <script>
+    const daysContainer = document.querySelector('.days');
+    const monthYear = document.getElementById('monthYear');
+    const prevMonthBtn = document.getElementById('prevMonth');
+    const nextMonthBtn = document.getElementById('nextMonth');
+
+    const today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+
+    // Fonction pour afficher le calendrier
+    function displayCalendar(month, year) {
+      // Réinitialiser le contenu des jours
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      daysContainer.innerHTML = `
+        <div class="day day-header">Lun</div>
+        <div class="day day-header">Mar</div>
+        <div class="day day-header">Mer</div>
+        <div class="day day-header">Jeu</div>
+        <div class="day day-header">Ven</div>
+        <div class="day day-header">Sam</div>
+        <div class="day day-header">Dim</div>
+      `;
+
+      // Ajouter des cases vides pour les jours avant le début du mois
+      for (let i = 1; i < firstDay; i++) {
+        daysContainer.innerHTML += <div class="day"></div>;
+      }
+
+      // Ajouter les jours du mois
+      for (let day = 1; day <= daysInMonth; day++) {
+        const isToday = day === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+        daysContainer.innerHTML += <div class="day ${isToday ? 'current-day' : ''}">${day}</div>;
+      }
+
+      // Mettre à jour le titre (mois et année)
+      const monthNames = [
+        'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+        'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+      ];
+      monthYear.textContent = ${monthNames[month]} ${year};
+    }
+
+    // Gérer les boutons précédent et suivant
+    prevMonthBtn.addEventListener('click', () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        [6:03 PM, 1/11/2025] <\>:  currentYear--;
+      }
+      displayCalendar(currentMonth, currentYear);
+    });
+
+    nextMonthBtn.addEventListener('click', () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      displayCalendar(currentMonth, currentYear);
+    });
+
+    // Afficher le calendrier initial
+    displayCalendar(currentMonth, currentYear);
+  </script>
+</body>
+</html>
+[6:04 PM, 1/11/2025] <\>

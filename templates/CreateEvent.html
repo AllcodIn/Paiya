@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/CreateEvent.css">
+    <title>Event Creation</title>
+</head>
+<body>
+    <div class="container">
+<!-- 
+        <a href="{{ url_for('/') }}""><button class="Preview">Preview</button></a> -->
+
+
+        <button class="Preview"><a href="{{ url_for('index') }}""><img src="../static/images/Back.png" alt="Back.png"></a></button>
+
+        <!-- <a href="{{ url_for('/') }}""></a> -->
+
+        <!-- <button class="Preview">Preview</button> -->
+
+        <div class="text1">
+            <h1>Créer votre évènement</h1>
+            <br>
+            <!-- <p>Créez des moments inoubliables en partageant votre passion! Publiez dès maintenant votre évènement sur Paiya et connectez-vous avec une communauté enthousiaste</p> -->
+        </div>
+
+        <form action="../templates/index.html">
+            <div class="fullName">
+
+            <label for="">Nom <k>*</k></label>
+            <input type="text" placeholder="Veuillez entrer le  nom de l'évènement" required>
+            
+            <div class="name1"></div>
+            <label for="">Lieu<k>*</k></label>    
+            <input type="text" placeholder="Veuillez entrer le lieu" >
+            
+            </div>
+
+            <label for="">Date<k>*</k></label>
+            <input type="date" placeholder="Veuillez entrer une date" required>
+            
+            <label >Affiche <k>*</k></label>
+
+            <!-- <div class="profile-img"> -->
+
+            <label class="file-label">
+            <input type="file" class="file-input"
+            placeholder="Veuillez choisr une image"
+            accept="image/*">
+             <k>Upload an image</k>
+             <!-- <p>Upload an image</p> -->
+            </label>
+
+            <!-- </div> -->
+
+                        <!-- <img class="img" src="../static/images/upload.png" alt="upload.png">     -->
+
+            <label for="">Description<k>*</k></label>
+            <textarea placeholder="Veuillez décrire l'évènement" required></textarea>
+            <!-- <input type="text" placeholder="Veuillez entrer votre mot de passe" required> -->
+            
+            <!-- <label for="">Confirmer le mot de passe <k>*</k></label>
+            <input type="password" placeholder="Veuillez entrer votre mot de passe" required> -->
+
+            <label for="">Nom de l'organisateur<k>*</k></label>
+            <input type="text" placeholder="Veuillez entrer le  nom de l'organisateur" required>
+
+            <label for="">Tel<k>*</k></label>
+            <input placeholder="Veuillez entrer un numéro de téléphone" required></input>
+
+            <a href="../templates/CreateAccount.html"><button class="btn">Valider</button></a>
+        
+            <!-- <div class="text2">
+                <p>En vous inscrivant vous acceptez les <k>Conditions générales d'utilisation</k> et la <k>Politique de confidentialité</k> de notre application </p> -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>
